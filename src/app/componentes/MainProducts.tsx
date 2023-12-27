@@ -1,34 +1,39 @@
+import Image from 'next/image'
 import React from 'react'
-
-const getProduct = async () => {
-    try {
-        const responese = await fetch(`${process.env.SHOPIFY_HOSTNAME}/admin/api/2023-10/products.json`, {
-        headers: new Headers({ 
-            'X-Shopify-Access-Token': process.env.SHOPIFY_API_KEY || ""
-            
-        })
-    })
-    const {products} = await responese.json()
-    return products
-    } catch (error) {
-        console.log(error)
-    }
-    
-
-    const {products} = await responese.json()
-    return products
-}
+import { getProduct } from '../services/shopify'
 
 const MainProducts = async () => {
-    const products = await getProduct() 
-    console.log(products)
+  const products = await getProduct()
+  
   return (
-    <div>
-      <div>
-        <h1 className='text-white'>Main Products</h1>
+    <div className='text-center mt-10'>
+      <h1 className='text-green-500 text-5xl'>Nuevos Productos</h1>
+
+      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mt-8'>
+        {products?.map((product: { id: any; title: any; images: any }) => {
+          const { id, title, images } = product;
+          const imageSrc = images[0]?.src;
+          return (
+            <div key={id} className='bg-green-700 p-4 rounded-lg'>
+              <Image
+                src={imageSrc}
+                width={300}
+                height={400}
+                alt={title}
+                loading='eager'
+                className='rounded-md mx-auto'
+              />
+
+              <p className='text-white mt-4 text-lg font-semibold'>{title}</p>
+              
+            </div>
+            )
+          })}
+        </div>
       </div>
-    </div>
+   
   )
 }
+
 
 export default MainProducts

@@ -11,7 +11,7 @@ const Descripcion = () => {
     console.log(hasBorder)
 
   return (
-    <div className='w-[600px] h-auto mx-auto grid grid-cols-2'>
+    <div className='w-[600px] h-auto mx-auto grid grid-cols-2 m-20'>
 
       <button onClick={handleClick} className='bg-transparent border-none cursor-pointer'>  
       <div>
@@ -25,13 +25,12 @@ const Descripcion = () => {
       </button>
         <div className=''>
             <h1 className='text-2xl ml-5 text-white font-bold'>
-                Bring the future today
+                Bienvenido al futuro 
             </h1>
 
             <h2 className='text-white ml-5 mt-5'>
-                Future World: Your Gateway to tomorrow tech dive into a world of cutting-edge gadgets
-                and tech accessories that will make your life easier and more fun. From smart home devices to
-                wearable tech, from audio and video to gaming gadgets, you'll find a huge selection of smart
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nisi labore rem dolore fuga, atque facilis vitae voluptates quia illum recusandae veniam vel aut, eveniet ipsa quisquam expedita! Minima, fugit
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima officia sunt, eius magni vel aperiam. 
             </h2>
         </div>
     </div>

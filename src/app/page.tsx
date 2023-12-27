@@ -1,13 +1,13 @@
 import Image from 'next/image'
-import Header from './componentes/Header'
-import Hero from './componentes/Hero'
+
 import Descripcion from './componentes/Descripcion'
 import MainProducts from './componentes/MainProducts'
+import Inicio from './componentes/Inicio'
 
 export default function Home() {
   return (
     <div className='h-[1000px]'>
-    <Hero />
+    <Inicio />
     <Descripcion />
     <MainProducts />
     </div>

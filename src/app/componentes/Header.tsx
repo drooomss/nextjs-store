@@ -4,8 +4,8 @@ import React from 'react'
 const Header = () => {
   return (
     <div className='bg-black w-full h-20 '>
-        <div className='flex mx-auto text-center justify-center gap-10'>
-          <Link href='/' className='text-3xl  text-center mt-5 text-white lin'>
+        <div className='flex mx-auto text-center justify-center gap-40'>
+          <Link href='/' className='text-3xl  text-center mt-5 text-white'>
             <p>Home</p>
           </Link>
           <Link href='/store' className='text-3xl text-center mt-5 text-white'>
